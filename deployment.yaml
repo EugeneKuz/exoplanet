@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exoplanet-deployment
+  labels:
+    app: exoplanet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exoplanet
+  template:
+    metadata:
+      labels:
+        app: exoplanet
+    spec:
+      containers:
+      - name: exoplanet
+        image: eugenekuz/exoplanet
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,23 @@
+[
+  {
+    "PlanetIdentifier": "Test Planet 1",
+    "TypeFlag": 0,
+    "RadiusJpt": 1,
+    "DiscoveryYear": 2008,
+    "HostStarTempK": 3
+  },
+  {
+    "PlanetIdentifier": "Test Planet 2",
+    "TypeFlag": 1,
+    "RadiusJpt": 2,
+    "DiscoveryYear": 2008,
+    "HostStarTempK": 4
+  },
+  {
+    "PlanetIdentifier": "Test Planet 3",
+    "TypeFlag": 2,
+    "RadiusJpt": 2,
+    "DiscoveryYear": 2008,
+    "HostStarTempK": 5
+  }
+]
