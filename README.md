@@ -22,6 +22,22 @@ python version 3.6.13
 ```
 <br>
 
+*Docker Execution*
+```
+docker build --tag test_image
+docker run -it test_image
+docker run -it test_image debug=true
+docker run -it test_image debug=false test_file=test_cases/case_1
+```
+*Kubernetes Execution*
+```
+kubectl create -f deployment.yaml
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl logs -p <pod name here>
+```
+<br>
+
 ## Test Cases
 
 Case 1
