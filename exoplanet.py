@@ -70,7 +70,7 @@ def parse_planet_data(data):
 	max_star_temp 	= 0
 	hottest_star 	= []
 	unique_planets	= []
-	timeline 		= {}
+	timeline 	= {}
 	
 	# Define sizes
 	sml_jpt = 1
@@ -80,10 +80,10 @@ def parse_planet_data(data):
 
 		# Get variables
 		type_flag 	= item["TypeFlag"]
-		planet_name = item["PlanetIdentifier"]
+		planet_name 	= item["PlanetIdentifier"]
 		radius_jpt 	= item["RadiusJpt"]
 		star_temp 	= item["HostStarTempK"]
-		discover_yr = item["DiscoveryYear"]
+		discover_yr 	= item["DiscoveryYear"]
 
 		# Check for valid values
 		if planet_name == "":
@@ -91,16 +91,16 @@ def parse_planet_data(data):
 		if discover_yr == "":
 			discover_yr = 0
 		if radius_jpt == "":
-			radius_jpt 	= 0
+			radius_jpt = 0
 		if star_temp == "":
 			star_temp = 0
 
 		# Set types
 		type_flag 	= int(type_flag)
-		discover_yr = int(discover_yr)
+		discover_yr 	= int(discover_yr)
 		radius_jpt 	= float(radius_jpt)
 		star_temp 	= float(star_temp)
-		planet_name = str(planet_name)
+		planet_name 	= str(planet_name)
 
 		# Check for duplicate entries
 		if planet_name in unique_planets:
@@ -166,16 +166,3 @@ if __name__ == "__main__":
 		print_orphans(orphans)
 		print_planet_hottest_star(hottest_star)
 		print_discovery_timeline(timeline,debug)
-
-
-
-# Corner cases. more than one max hottest temp
-# Corent case. missing disovery year
-# HOw do i find what is an orphan planet?
-# Corner case. What if radiuJpt is empty?
-# Corenr case. what if planetnae is empty? This doesnt exist apparnetly
-# What if temp is empty?
-# 1 planet, what about grammar?
-
-
-
